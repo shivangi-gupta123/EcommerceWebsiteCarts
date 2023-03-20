@@ -1,10 +1,147 @@
 .App {
   text-align: center;
+  background-color: rgb(233, 234, 238);
+
+}
+
+* {
+  box-sizing: border-box;
+
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+
+
+.cardItemswrapper {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+
+.card1 {
+  background-color: white;
+  padding: 8px;
+  text-align: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.card1:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+.card2 {
+  background-color: white;
+  padding: 8px;
+  text-align: center;
+  border-radius: 10px;
+  color: green;
+}
+
+.card3 {
+  background-color: white;
+  padding: 8px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: medium;
+  font-weight: 200;
+  color: #9E9E9E;
+}
+
+.card4 {
+  background-color: white;
+  padding: 8px;
+  text-align: left;
+  border-radius: 10px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 40px;
+
+}
+
+.button {
+  display: flex;
+  justify-content: left;
+
+
+}
+
+.btn1 {
+  height: 25px;
+  background-color: hsl(122, 40%, 45%);
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 8px;
+
+}
+
+.gotocart {
+  height: 30px;
+  width: 150px;
+  background-color: hsl(122, 40%, 45%);
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.gotocart:hover {
+  background-color: #61dafb;
+}
+
+
+.btn2 {
+  height: 25px;
+  background-color: hsl(122, 26%, 77%);
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.btn1:hover {
+  background-color: #61dafb;
+}
+
+
+
+span {
+  color: rgb(19, 119, 19);
+  font-size: large;
+}
+
+.main {
+  border-radius: 5px;
+  height: 360px;
+}
+
+.onclick {
+  /* background-color: hsl(122, 64%, 76%); */
+  outline: none;
+}
+
+.onclick:hover {
+  background-color: rgb(29, 152, 201);
+
+
+}
+
+.selected {
+  background: blue;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,6 +169,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
