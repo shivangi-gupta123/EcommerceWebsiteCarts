@@ -5,7 +5,7 @@ import "./Home.css"
 
 const Home = (props) => {
 
-    const { handleAddToCart, handleNextClick, handlePageClick, handlePrevClick, handleRemoveFromCart, currentPage, totalPages, cartItems, data, quantity = 1 } = props
+    const { handleAddToCart, handleNextClick, handlePageClick, handlePrevClick, handleRemoveFromCart, currentPage, totalPages, cartItems, data, quantity } = props
 
     if (!data) {
         return <h1>Loading....</h1>;
@@ -32,7 +32,7 @@ const Home = (props) => {
                                 <div className="pricecategory" style={{ display: "flex", justifyContent: "space-between" }}>
                                     <div className="card2"> {product.price}  $</div>
                                     <div className="card3">{product.category}</div></div>
-                                <div className="card4"> {product.description.slice(0, 50)}....<span>Read more</span>
+                                <div className="card4"> {product.description.slice(0, 40)}....<span>Read more</span>
                                 </div>
                                 <div className='button'>
 

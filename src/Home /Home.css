@@ -64,12 +64,15 @@
 
 .card4 {
     background-color: white;
-    padding-top: 20px;
+    padding: 8px;
     text-align: left;
     border-radius: 10px;
     overflow-x: hidden;
     overflow-y: hidden;
     height: 40px;
+    padding-top: 20px;
+
+
 
 }
 
@@ -121,7 +124,7 @@
 
 
 span {
-    color: rgb(19, 119, 19);
+    color: #137713;
     font-size: large;
 }
 
