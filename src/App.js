@@ -69,10 +69,6 @@ function cartReducer(state, action) {
 }
 
 
-
-
-// console.log(initialState.quantity, "shivangi");
-
 function App() {
   const [data, setData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -114,10 +110,7 @@ function App() {
   console.log(cartItems);
 
 
-  const handleRemoveItem = (id) => cartItems.filter((item) => item.id !== id);
 
-
-  console.log(cartItems, "here are items")
 
 
   const handleRemoveFromCart = (productId) => {
@@ -137,7 +130,7 @@ function App() {
       <Route path='/' element={<Home cartItems={cartItems} handleAddToCart={handleAddToCart} handleNextClick={handleNextClick} handlePrevClick={handlePrevClick}
         handleRemoveFromCart={handleRemoveFromCart} currentPage={currentPage} handlePageClick={handlePageClick} data={data} totalPages={totalPages} handleDecrementQuantity={handleDecrementQuantity} handleIncrementQuantity={handleIncrementQuantity} />} />
       <Route path='/cart'
-        element={<Totalcartitems handleIncrementQuantity={handleIncrementQuantity} handleDecrementQuantity={handleDecrementQuantity} handleRemoveItem={handleRemoveItem} cartItems={cartItems} />} />
+        element={<Totalcartitems handleIncrementQuantity={handleIncrementQuantity} handleDecrementQuantity={handleDecrementQuantity} handleRemoveFromCart={handleRemoveFromCart} cartItems={cartItems} />} />
     </Routes>
   )
 }

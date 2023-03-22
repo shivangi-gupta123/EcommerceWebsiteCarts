@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './totalcartitems.css';
 
-
-
-
-function Totalcartitems({ cartItems, handleIncrementQuantity, handleDecrementQuantity, handleRemoveItem }) {
+function Totalcartitems({ cartItems, handleIncrementQuantity, handleDecrementQuantity, handleRemoveFromCart, handleRemoveItem }) {
     const items = cartItems;
     const [totalPrice, setTotalPrice] = useState(0);
     console.log(cartItems, "here are cart items");
@@ -25,17 +22,17 @@ function Totalcartitems({ cartItems, handleIncrementQuantity, handleDecrementQua
             <div className='main-cart' style={{ display: "flex", justifyContent: "center" }}>
                 <div className='cart-items1' >
                     {items?.map((item, index) => <div key={index} className="maindiv" style={{ display: "flex", textAlign: "center" }}>
-                        <img src={item.images[0]} alt="" style={{ height: "100px", width: "100px", margin: "20px" }} />
+                        <img src={item.images[0]} alt="" style={{ height: "150px", width: "150px", margin: "20px" }} />
                         <div className='maincard' style={{ textAlign: "start", backgroundColor: "white", justifyContent: "space-between" }}>
                             <div className='cardtitle'>{item.title.slice(0, 25)}</div>
                             <div className="cardpricecategory">
                                 <div className="cardcategory" style={{ color: "grey" }}>{item.category}</div></div>
-                            <div className="carddescription"> {item.description.slice(0, 50)}....
+                            <div className="carddescription"> {item.description.slice(0, 40)}....<span >Read more</span>
                             </div>
                         </div>
 
                         <span style={{ display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center" }}>
-                            <div className="cardprice" style={{ margin: "40px" }}>{item.price * item.quantity}$</div></span>
+                            <div className="cardprice" style={{ margin: "40px" }}>  {item.price * item.quantity}$</div></span>
 
                         <div className="cart-item-quantity" style={{ margin: "10px" }}>
                             <button onClick={() => handleIncrementQuantity(item.id)} className="btn">-</button>
@@ -43,7 +40,7 @@ function Totalcartitems({ cartItems, handleIncrementQuantity, handleDecrementQua
                             <button onClick={() => handleDecrementQuantity(item.id)} className="btn">+</button>
                         </div>
 
-                        <button onClick={() => handleRemoveItem(item.id)} className='removefromcart' style={{ margin: "55px 15px", border: "1px solid transparent", backgroundColor: "#129913", borderRadius: "5px", color: "white", textTransform: "uppercase", cursor: "pointer" }}>Remove </button>
+                        <button onClick={() => handleRemoveFromCart(item.id)} className='removefromcart' style={{ margin: "45px 10px", border: "1px solid transparent", backgroundColor: "#129913", borderRadius: "5px", color: "white", textTransform: "uppercase", cursor: "pointer", height: "30px" }}>Remove </button>
                     </div>
 
 
