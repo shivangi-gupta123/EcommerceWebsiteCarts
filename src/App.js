@@ -78,12 +78,16 @@ function App() {
   const { cartItems } = state;
   console.log(cartItems, 'safdasdfsadf')
 
+
   useEffect(() => {
-    fetch("https://dummyjson.com/products?limit=100")
-      .then((res) => res.json())
-      .then((data) => setData(data));
-    setTotalPages(data?.total / postsPerPage);
-  }, [data?.totalPages]);
+    const fetchData = async () => {
+      const response = await fetch("https://dummyjson.com/products?limit=100")
+      const data = await response.json();
+      setData(data);
+      setTotalPages(data?.total / postsPerPage);
+    };
+    fetchData();
+  }, []);
 
   const handlePageClick = (val) => {
     setCurrentPage(val);
@@ -109,13 +113,9 @@ function App() {
   };
   console.log(cartItems);
 
-
-
-
-
-  const handleRemoveFromCart = (productId) => {
+  function handleRemoveFromCart(productId) {
     dispatch({ type: 'REMOVE_FROM_CART', payload: productId });
-  };
+  }
 
   const handleDecrementQuantity = (productId) => {
     dispatch({ type: 'INCREMENT_QUANTITY', payloadId: productId });
