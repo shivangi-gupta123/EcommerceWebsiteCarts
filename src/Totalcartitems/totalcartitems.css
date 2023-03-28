@@ -247,7 +247,6 @@
  .total-items {
      display: flex;
      flex-direction: column;
-
      align-items: flex-start;
      justify-content: flex-start;
      width: 100%;
@@ -266,7 +265,7 @@
      font-weight: bold;
      padding: 10px 0px;
      margin: 10px 0px;
-     text-align: right;
+     text-align: left;
      font-family: sans-serif;
  }
 
@@ -282,6 +281,23 @@
      cursor: pointer;
  }
 
+ .proceed-to-checkout {
+     display: flex;
+     cursor: pointer;
+     align-items: center;
+     justify-content: center;
+     height: 3rem;
+     padding: auto;
+     background-color: #c69d66;
+     border: 1px solid transparent;
+     color: white;
+     font-size: 14px;
+     font-weight: 800;
+     border-radius: 4px;
+     width: 250px;
+ }
+
+
  @media only screen and (max-width: 576px) {
      .main-cart {
          display: flex;
@@ -290,7 +306,60 @@
      }
 
      .totalamount {
+         font-size: 15px;
+         font-weight: bold;
+     }
+ }
+
+ @media only screen and (min-width: 280px) and (max-width: 653px) {
+     .priceandquantity {
+         display: flex !important;
+         flex-wrap: wrap !important;
+         justify-content: space-between !important;
+         /* padding-right: 2px !important; */
+         width: 212px;
+     }
+
+     .proceed-to-checkout {
+         display: flex;
+         cursor: pointer;
+         align-items: center;
+         justify-content: center;
+         height: 2rem;
+         background-color: #c69d66;
+         border: 1px solid transparent;
+         color: white;
          font-size: 10px;
-         font-weight: bolder;
+         font-weight: bold;
+         border-radius: 4px;
+         width: auto !important;
+
+     }
+
+
+     .removefromcart {
+         width: 45px;
+         flex-wrap: wrap;
+         font-size: 10px;
+     }
+
+     .cart-item-quantity {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+
+     }
+
+
+ }
+
+ @media only screen and (min-width: 320px) and (max-width: 572px) {
+     .priceandquantity {
+         display: flex !important;
+         flex-wrap: wrap !important;
+         justify-content: space-between !important;
+         flex-wrap: wrap;
+         width: 230px;
+
      }
  }

@@ -25,16 +25,16 @@ const Home = (props) => {
                     <h1> Online Shopping Store </h1>
                     <div className='tci'>
                         <div className='cartitemlength' >
-                            +{cartItems.length}</div>
+                            {cartItems.length}</div>
                         <Link to="/cart">
                             <ShoppingCartIcon className='shoppingcarticon'></ShoppingCartIcon>
                         </Link>
                     </div>
                 </div>
 
-                <img src="banner1.jpg" style={{ width: "100%" }}></img>
+                <img src="banner1.jpg"></img>
 
-                <h1 style={{ display: "flex", color: "black", fontSize: "40px", justifyContent: "center", fontFamily: "sans-serif" }}>Explore our Products</h1>
+                {/* <h1 style={{ display: "flex", color: "black", fontSize: "40px", justifyContent: "center", fontFamily: "sans-serif", flexWrap: 'wrap' }}>Explore our Products</h1> */}
 
                 <div className="productwrapper">
                     {data &&
@@ -46,7 +46,7 @@ const Home = (props) => {
                                 <div className="pricecategory">
                                     <div className="card2">$ {product.price}</div>
                                     <div className="card3">{product.category}</div></div>
-                                <div className="card4"> {product.description.slice(0, 25)}....<span></span>
+                                <div className="card4"> {product.description.slice(0, 12)}....<span>Read more</span>
                                 </div>
                                 <div className='button'>
 

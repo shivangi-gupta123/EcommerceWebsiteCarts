@@ -30,8 +30,8 @@ function Totalcartitems({ cartItems, handleIncrementQuantity, handleDecrementQua
                                 <div className="cardcategory" style={{ color: "grey" }}>{item.category}</div></div>
                             <div className="carddescription"> {item.description.slice(0, 40)}....<span >Read more</span>
                             </div>
-                            <div className='price&quantity' style={{ display: "flex", justifyContent: "space-between" }}>
-                                <div className="cart-item-quantity">
+                            <div className='priceandquantity' style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}>
+                                <div className="cart-item-quantity" >
                                     <span className='cardpricemainblock'>
                                         <div className="cardprice">  {item.price * item.quantity}$</div></span>
                                     <button onClick={() => handleIncrementQuantity(item.id)} className="btn">-</button>
@@ -51,7 +51,7 @@ function Totalcartitems({ cartItems, handleIncrementQuantity, handleDecrementQua
                             <div className="totalamountmain" >
                                 <div className='totalamount'>Total Amount: {totalPrice}</div>
                             </div>
-                            <button style={{ display: "flex", cursor: "pointer", alignItems: "center", justifyContent: "center", height: "3rem", padding: "auto", backgroundColor: "#c69d66", border: '1px solid transparent', color: "white", fontSize: "15px", fontWeight: "bold", borderRadius: "4px" }}>Proceeed to Checkout</button>
+                            <button className="proceed-to-checkout">Proceeed to Checkout</button>
                         </div>
                     </div>
 
